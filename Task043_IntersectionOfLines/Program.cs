@@ -7,23 +7,18 @@
 
 Console.Clear();
 Console.Write("Введите значение b1: ");
-int b1 = Int32.Parse(Console.ReadLine());
+double b1 = Int64.Parse(Console.ReadLine());
 Console.Write("Введите значение k1: ");
-int k1 = Int32.Parse(Console.ReadLine());
+double k1 = Int64.Parse(Console.ReadLine());
 Console.Write("Введите значение b2: ");
-int b2 = Int32.Parse(Console.ReadLine());
+double b2 = Int64.Parse(Console.ReadLine());
 Console.Write("Введите значение k2: ");
-int k2 = Int32.Parse(Console.ReadLine());
+double k2 = Int64.Parse(Console.ReadLine());
 
 Console.Write("Прямые, заданные уравнениями y = k1 * x + b1 и y = k2 * x + b2, пересекутся в точке ");
 
-double a = b2 - b1;
-double b = k1 - k2;
-double x = Math.Round((a / b), 1);
-
-// double x = Math.Round(((b2 - b1) / (k1 - k2)), 1);
+double x = Math.Round(((b2 - b1) / (k1 - k2)), 1);
 double y = Math.Round((k1 * x + b1), 1);
-
 
 Console.WriteLine($"x = {x}, y = {y}");
 Console.WriteLine();
